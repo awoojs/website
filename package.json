@@ -1,8 +1,19 @@
 {
+  "scripts": {
+    "watch": "chokidar '**/*' -i '(node_modules|dest)/**/*' -c 'node index'",
+    "start": "node index",
+    "serve": "http-server dest",
+    "dev": "concurrently 'npm run watch' 'npm run serve'"
+  },
   "dependencies": {
     "@weh/layouts": "1.0.1",
     "@weh/markdown": "1.0.2",
     "@weh/matter": "1.0.3",
     "@weh/weh": "2.2.3"
+  },
+  "devDependencies": {
+    "chokidar-cli": "1.2.0",
+    "concurrently": "3.5.0",
+    "http-server": "0.10.0"
   }
 }

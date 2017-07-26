@@ -6,8 +6,7 @@ const layouts = require('@weh/layouts')
 const rename = require('./plugins/rename')
 
 function layoutsFilter (file, options, files) {
-  console.log(file)
-  return file.path.endsWith('.md')
+  return file.path.endsWith('.md') 
 }
 
 const siteLayouts = {
