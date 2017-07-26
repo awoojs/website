@@ -11,9 +11,8 @@ function plugin (opts = {}) {
 }
 
 function transform (file, opts, files) {
-  const path = file.path.split('.')
-  path.pop()
-  const newPath = [path.join(), opts.extension].join('.')
+  const path = file.path
+  const newPath = path.replace(/\.[^\.]+$/i, `.${opts.extension}`)
   return Object.assign(file, { path: newPath })
 }
 
