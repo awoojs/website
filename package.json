@@ -3,7 +3,8 @@
     "watch": "chokidar '**/*' -i '(node_modules|dest)/**/*' -c 'node index'",
     "start": "node index",
     "serve": "http-server dest",
-    "dev": "concurrently 'npm run watch' 'npm run serve'"
+    "dev": "concurrently 'npm run watch' 'npm run serve'",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@weh/layouts": "1.0.1",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "chokidar-cli": "1.2.0",
     "concurrently": "3.5.0",
+    "gh-pages": "1.0.0",
     "http-server": "0.10.0"
   }
 }
