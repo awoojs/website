@@ -4,7 +4,8 @@
     "start": "node index",
     "serve": "http-server dest",
     "dev": "concurrently 'npm run watch' 'npm run serve'",
-    "deploy": "npm start && gh-pages -d dest"
+    "deploy": "npm start && gh-pages -d dest",
+    "lint": "standard | snazzy"
   },
   "dependencies": {
     "@weh/layouts": "1.0.1",
@@ -16,6 +17,8 @@
     "chokidar-cli": "1.2.0",
     "concurrently": "3.5.0",
     "gh-pages": "1.0.0",
-    "http-server": "0.10.0"
+    "http-server": "0.10.0",
+    "snazzy": "7.0.0",
+    "standard": "10.0.2"
   }
 }
