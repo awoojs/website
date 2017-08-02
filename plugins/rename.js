@@ -12,7 +12,7 @@ function plugin (opts = {}) {
 
 function transform (file, opts, files) {
   const path = file.path
-  const newPath = path.replace(/\.[^\.]+$/i, `.${opts.extension}`)
+  const newPath = path.replace(/\.[^]+$/i, `.${opts.extension}`)
   return Object.assign(file, { path: newPath })
 }
 
