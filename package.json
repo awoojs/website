@@ -11,7 +11,8 @@
     "@weh/layouts": "1.0.1",
     "@weh/markdown": "1.0.2",
     "@weh/matter": "1.0.3",
-    "@weh/weh": "2.2.3"
+    "@weh/weh": "2.2.4",
+    "tachyons": "4.7.4"
   },
   "devDependencies": {
     "chokidar-cli": "1.2.0",
