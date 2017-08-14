@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "chokidar '**/*' -i '(node_modules|dest)/**/*' -c 'node index'",
+    "watch": "npm start && chokidar '**/*' -i '(node_modules|dest)/**/*' -c 'node index'",
     "start": "node index",
     "serve": "http-server dest",
     "dev": "concurrently 'npm run watch' 'npm run serve'",
