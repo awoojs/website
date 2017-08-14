@@ -3,10 +3,8 @@ const matter = require('@weh/matter')
 const markdown = require('@weh/markdown')
 const layouts = require('@weh/layouts')
 
-const rename = require('./plugins/rename')
-
 function layoutsFilter (file, options, files) {
-  return file.path.endsWith('.md')
+  return file.path.endsWith('.html')
 }
 
 const siteLayouts = {
@@ -22,10 +20,6 @@ weh(async site => {
   site.use(matter)
   site.use(markdown)
   site.use(layouts, { filter: layoutsFilter, layouts: siteLayouts })
-  site.use(rename, {
-    filter: file => file.path.endsWith('.md'),
-    extension: 'html'
-  })
 
   return site
 })
