@@ -1,5 +1,0 @@
----
-layout: main
----
-
-hello world!
