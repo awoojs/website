@@ -8,11 +8,11 @@
     "lint": "standard | snazzy"
   },
   "dependencies": {
-    "@weh/layouts": "1.0.1",
-    "@weh/markdown": "1.0.2",
-    "@weh/matter": "1.0.3",
+    "@weh/layouts": "1.0.5",
+    "@weh/markdown": "1.0.5",
+    "@weh/matter": "1.0.5",
     "@weh/weh": "3.0.0",
-    "tachyons": "4.7.4"
+    "tachyons": "4.8.0"
   },
   "devDependencies": {
     "chokidar-cli": "1.2.0",
@@ -20,6 +20,6 @@
     "gh-pages": "1.0.0",
     "http-server": "0.10.0",
     "snazzy": "7.0.0",
-    "standard": "10.0.2"
+    "standard": "10.0.3"
   }
 }
