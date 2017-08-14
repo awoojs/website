@@ -22,4 +22,8 @@ weh(async site => {
   site.use(layouts, { filter: layoutsFilter, layouts: siteLayouts })
 
   return site
+}).then(() => {
+  console.log('site built!')
+}).catch(err => {
+  console.log(err)
 })
