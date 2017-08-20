@@ -3,5 +3,40 @@ layout: main
 ---
 
 <p class="measure lh-copy">
-  is cool!
+  is a static site generator that is small, extendable and modular.
+  It uses new JavaScript features and functional programming to
+  approach static site generation from a more declarative angle.
+</p>
+<p class="measure lh-copy">
+  Here's an example that converts all files in the current directory
+  to 'hello weh!':
+</p>
+
+<pre class="pre black-70" style="overflow: auto;"><code class="code dib f6 ph3 pb3 bg-black-70 washed-green">
+const weh = require('@weh/weh')
+
+const plugin = () => {
+  return files => files.map(file => {...file, contents: 'hello weh!'})
+}
+
+weh(async site => {
+  site.use(plugin)
+  return site
+})
+</code></pre>
+
+<i class="measure">(this example requires Node.js 8.4)</i>
+
+<p class="measure lh-copy mt4">
+  You can install weh using npm:
+</p>
+
+<pre class="pre black-70" style="overflow: auto"><code class="code dib f6 pb3 ph3 bg-black-70 washed-green">
+npm install @weh/weh
+</code></pre>
+
+<p class="measure lh-copy">
+  More information can be found on the project's
+  <a class="link blue" href="https://github.com/wehjs/weh#readme">GitHub repository</a>.
+  This website is built using weh, and is also on <a class="link blue" href="https://github.com/wehjs/website">GitHub</a>.
 </p>
