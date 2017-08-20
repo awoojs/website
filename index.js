@@ -12,6 +12,13 @@ const siteLayouts = {
   main: require('./layouts/main')
 }
 
+const addCNAME = () => {
+  return files => [...files, {
+    path: 'CNAME',
+    contents: 'weh.js.org'
+  }]
+}
+
 weh(async site => {
   site.config({
     source: 'src',
@@ -22,6 +29,7 @@ weh(async site => {
   site.use(markdown)
   site.use(layouts, { filter: layoutsFilter, layouts: siteLayouts })
   site.use(tachyons)
+  site.use(addCNAME)
 
   return site
 }).then(() => {
