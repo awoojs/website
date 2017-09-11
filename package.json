@@ -3,7 +3,7 @@
     "watch": "npm start && chokidar '**/*' -i '(node_modules|dest)/**/*' -c 'node index'",
     "start": "node index",
     "serve": "http-server dest",
-    "dev": "concurrently 'npm run watch' 'npm run serve'",
+    "dev": "unset DEBUG; concurrently 'npm run watch' 'npm run serve'",
     "deploy": "npm start && gh-pages -d dest",
     "lint": "standard | snazzy"
   },
