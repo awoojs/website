@@ -3,6 +3,7 @@ const matter = require('@weh/matter')
 const markdown = require('@weh/markdown')
 const layouts = require('@weh/layouts')
 const tachyons = require('weh-tachyons')
+const vfile = require('vfile')
 
 function layoutsFilter (file, options, files) {
   return file.path.endsWith('.html')
@@ -13,10 +14,10 @@ const siteLayouts = {
 }
 
 const addCNAME = () => {
-  return files => [...files, {
+  return files => [...files, vfile({
     path: 'CNAME',
     contents: 'weh.js.org'
-  }]
+  })]
 }
 
 weh(async site => {
