@@ -24,7 +24,10 @@
 const weh = require('@weh/weh')
 
 const plugin = () => {
-  return files => files.map(file => {...file, contents: 'hello weh!'})
+  return files => file.map(file => {
+    file.contents = 'hello weh!'
+    return file
+  })
 }
 
 weh(async site => {
@@ -32,8 +35,6 @@ weh(async site => {
   return site
 })
 </code></pre>
-
-<i class="measure">(this example requires Node.js 8.4)</i>
 
 <p class="measure lh-copy mt4">
   You can install weh using npm:
