@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@weh/layouts": "1.0.5",
-    "@weh/markdown": "^1.0.6",
-    "@weh/matter": "^1.0.6",
+    "@weh/markdown": "^1.1.0",
+    "@weh/matter": "^1.1.0",
     "@weh/weh": "^4.0.0",
     "tachyons": "^4.8.1",
     "vfile": "^2.2.0",
