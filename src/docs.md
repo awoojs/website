@@ -3,8 +3,6 @@ layout: main
 title: weh docs
 ---
 
-## weh API
-
 ### weh(function (site))
 
 Builds a site. This function takes another function that describes how the site
