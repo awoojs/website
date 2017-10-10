@@ -8,7 +8,7 @@ module.exports = (file, files) =>
     <link rel="stylesheet" href="/tachyons.css">
   </head>
   <body>
-    <article class="pa3 pa5-ns sans-serif">
+    <article class="pv2 ph5 sans-serif">
       <h1 class="f3 f2-m f1-l">${file.metadata.title}</h1>
       ${file.contents}
     </article>
