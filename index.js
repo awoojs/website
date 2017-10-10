@@ -2,11 +2,12 @@ const weh = require('@weh/weh')
 const matter = require('@weh/matter')
 const markdown = require('@weh/markdown')
 const layouts = require('@weh/layouts')
+const pretty = require('@weh/pretty')
 const tachyons = require('weh-tachyons')
 const vfile = require('vfile')
 
 function layoutsFilter (file, options, files) {
-  return file.path.endsWith('.html')
+  return ['.md', '.html'].some(e => e === file.extname)
 }
 
 const siteLayouts = {
@@ -29,6 +30,7 @@ weh(async site => {
   site.use(matter)
   site.use(markdown)
   site.use(layouts, { filter: layoutsFilter, layouts: siteLayouts })
+  site.use(pretty)
   site.use(tachyons)
   site.use(addCNAME)
 
