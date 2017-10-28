@@ -10,7 +10,7 @@ module.exports = (file, files) =>
   <body>
     <article class="pv2 ph5 sans-serif">
       <h1 class="f3 f2-m f1-l">${file.metadata.title}</h1>
-      ${file.contents}
+      <div class="measure lh-copy">${file.contents}</div>
     </article>
   </body>
 </html>
