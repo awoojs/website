@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>weh</title>
+    <title>awoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/tachyons.css">
   </head>
   <body>
     <article class="pv2 ph5 sans-serif">
-      <h1 class="f3 f2-m f1-l">weh docs</h1>
-      <div class="measure lh-copy"><h3>weh(function (site))</h3>
+      <h1 class="f3 f2-m f1-l">awoo docs</h1>
+      <div class="measure lh-copy"><h3>awoo(function (site))</h3>
 <p>Builds a site. This function takes another function that describes how the site
 is built. Basically, it looks like this:</p>
-<pre><code class="language-js">weh(async site =&gt; {
+<pre><code class="language-js">awoo(async site =&gt; {
   // your site definition here
   return site
 })
@@ -22,14 +22,14 @@ configuring your entire site, and all of its methods are documented below.</p>
 <p>This function needs to return <code>site</code>, wrapped in a promise. Thankfully,
 making it return a promise is as easy as using the <code>async</code> keyword
 (see the above example).</p>
-<h3>weh.integration(function (site), files)</h3>
-<p>Basically the same as <code>weh()</code>, but sets <code>dry_run</code> to true and accepts an array
+<h3>awoo.integration(function (site), files)</h3>
+<p>Basically the same as <code>awoo()</code>, but sets <code>dry_run</code> to true and accepts an array
 of files to set as <code>config.files</code>, in order to override the read process.
 Used in integration tests for plugins.</p>
 <h3>site.config(conf)</h3>
 <p>Configures your site with either a specified config object or the default config.
 You don't <em>need</em> to call this function in your build process - if you omit it,
-<code>weh</code> will use the <a href="#default-configuration">default config</a> instead, though you'd probably want to
+<code>awoo</code> will use the <a href="#default-configuration">default config</a> instead, though you'd probably want to
 adjust your source and destination paths.</p>
 <h3>site.use(plugin, [options])</h3>
 <p>Registers a plugin to be used in the build process. See <a href="#plugin-structure">plugin structure</a> for
@@ -38,11 +38,11 @@ more information on how to write plugins.</p>
 options. It should be an object, although that is up to each plugin to
 decide.</p>
 <h3>Default Configuration</h3>
-<p>This is an exhaustive list of all <code>weh</code> config options:</p>
+<p>This is an exhaustive list of all <code>awoo</code> config options:</p>
 <ul>
 <li><strong>source</strong>: The source directory where files are being read from. The default
-is the directory you're running <code>weh</code> from.</li>
-<li><strong>destination</strong>: The directory <code>weh</code> will place built files into. The default
+is the directory you're running <code>awoo</code> from.</li>
+<li><strong>destination</strong>: The directory <code>awoo</code> will place built files into. The default
 is the directory you're in + <code>_site</code> (just like Jekyll!)</li>
 <li><strong>no_read</strong>: Whether to skip reading. This should be coupled with using <code>config.files</code>.</li>
 <li><strong>no_write</strong>: Whether to skip writing completely. This is useful if you want to run
@@ -80,7 +80,7 @@ that every <code>vfile</code> has:</p>
 <li><code>dirname</code> (the name of the parent directory)</li>
 <li><code>data</code> (this is where you store custom data related to the file)</li>
 </ul>
-<p>If <code>weh</code> stumbles upon a binary file, it is kept in a buffer structure, because
+<p>If <code>awoo</code> stumbles upon a binary file, it is kept in a buffer structure, because
 converting it to a string would effectively break the file. You can filter
 binary files from your fileset like this:</p>
 <pre><code class="language-js">const onlyTextFiles = files.filter(file =&gt; typeof file.contents === 'string')
@@ -95,12 +95,12 @@ the (modified) <code>files</code> object at the end.</p>
   })
 }
 
-// ...omit weh initialization
+// ...omit awoo initialization
 site.use(plugin, `haha i\'ve replaced your file!`)
-// ...omit other weh stuff
+// ...omit other awoo stuff
 </code></pre>
 <p>Of course, you can put this into a npm module and publish it for the world to
-see! I advise that you add the <code>weh</code> tag to your package so that it remains
+see! I advise that you add the <code>awoo</code> tag to your package so that it remains
 discoverable.</p>
 </div>
     </article>

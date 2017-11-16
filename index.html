@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>weh</title>
+    <title>awoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/tachyons.css">
   </head>
   <body>
     <article class="pv2 ph5 sans-serif">
-      <h1 class="f3 f2-m f1-l">weh</h1>
+      <h1 class="f3 f2-m f1-l">awoo</h1>
       <div class="measure lh-copy">
 <p class="measure lh-copy">
   is a static site generator that is small, extendable and modular.
@@ -17,38 +17,38 @@
 </p>
 <p class="measure lh-copy">
   Here's an example that converts all files in the current directory
-  to 'hello weh!':
+  to 'awoooo!':
 </p>
 
 <pre class="pre black-70" style="overflow: auto;"><code class="code dib f6 ph3 pb3 bg-black-70 washed-green">
-const weh = require('@weh/weh')
+const awoo = require('awoo')
 
 const plugin = () => {
   return files => file.map(file => {
-    file.contents = 'hello weh!'
+    file.contents = 'awoooo!'
     return file
   })
 }
 
-weh(async site => {
+awoo(async site => {
   site.use(plugin)
   return site
 })
 </code></pre>
 
 <p class="measure lh-copy mt4">
-  You can install weh using npm:
+  You can install awoo using npm:
 </p>
 
 <pre class="pre black-70" style="overflow: auto"><code class="code dib f6 pb3 ph3 bg-black-70 washed-green">
-npm install @weh/weh
+npm install awoo
 </code></pre>
 
 <p class="measure lh-copy">
-  See the weh documentation <a class="link blue" href="/docs">here</a>.<br>
+  See the awoo documentation <a class="link blue" href="/docs">here</a>.<br>
   More information can be found on the project's
-  <a class="link blue" href="https://github.com/wehjs/weh#readme">GitHub repository</a>.
-  This website is built using weh, and is also on <a class="link blue" href="https://github.com/wehjs/website">GitHub</a>.
+  <a class="link blue" href="https://github.com/awoojs/awoo#readme">GitHub repository</a>.
+  This website is built using awoo, and is also on <a class="link blue" href="https://github.com/awoojs/website">GitHub</a>.
 </p>
 </div>
     </article>
