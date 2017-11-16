@@ -3,7 +3,7 @@ module.exports = (file, files) =>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>weh</title>
+    <title>awoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/tachyons.css">
   </head>

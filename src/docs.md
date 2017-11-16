@@ -1,15 +1,15 @@
 ---
 layout: main
-title: weh docs
+title: awoo docs
 ---
 
-### weh(function (site))
+### awoo(function (site))
 
 Builds a site. This function takes another function that describes how the site
 is built. Basically, it looks like this:
 
 ```js
-weh(async site => {
+awoo(async site => {
   // your site definition here
   return site
 })
@@ -22,9 +22,9 @@ This function needs to return `site`, wrapped in a promise. Thankfully,
 making it return a promise is as easy as using the `async` keyword
 (see the above example).
 
-### weh.integration(function (site), files)
+### awoo.integration(function (site), files)
 
-Basically the same as `weh()`, but sets `dry_run` to true and accepts an array
+Basically the same as `awoo()`, but sets `dry_run` to true and accepts an array
 of files to set as `config.files`, in order to override the read process.
 Used in integration tests for plugins.
 
@@ -32,7 +32,7 @@ Used in integration tests for plugins.
 
 Configures your site with either a specified config object or the default config.
 You don't _need_ to call this function in your build process - if you omit it,
-`weh` will use the [default config] instead, though you'd probably want to
+`awoo` will use the [default config] instead, though you'd probably want to
 adjust your source and destination paths.
 
 ### site.use(plugin, [options])
@@ -46,11 +46,11 @@ decide.
 
 ### Default Configuration
 
-This is an exhaustive list of all `weh` config options:
+This is an exhaustive list of all `awoo` config options:
 
 - __source__: The source directory where files are being read from. The default
-  is the directory you're running `weh` from.
-- __destination__: The directory `weh` will place built files into. The default
+  is the directory you're running `awoo` from.
+- __destination__: The directory `awoo` will place built files into. The default
   is the directory you're in + `_site` (just like Jekyll!)
 - __no_read__: Whether to skip reading. This should be coupled with using `config.files`.
 - __no_write__: Whether to skip writing completely. This is useful if you want to run
@@ -97,7 +97,7 @@ that every `vfile` has:
 - `dirname` (the name of the parent directory)
 - `data` (this is where you store custom data related to the file)
 
-If `weh` stumbles upon a binary file, it is kept in a buffer structure, because
+If `awoo` stumbles upon a binary file, it is kept in a buffer structure, because
 converting it to a string would effectively break the file. You can filter
 binary files from your fileset like this:
 
@@ -118,13 +118,13 @@ const plugin = opts => {
   })
 }
 
-// ...omit weh initialization
+// ...omit awoo initialization
 site.use(plugin, `haha i\'ve replaced your file!`)
-// ...omit other weh stuff
+// ...omit other awoo stuff
 ```
 
 Of course, you can put this into a npm module and publish it for the world to
-see! I advise that you add the `weh` tag to your package so that it remains
+see! I advise that you add the `awoo` tag to your package so that it remains
 discoverable.
 
 [default config]: #default-configuration

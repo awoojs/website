@@ -1,8 +1,8 @@
-const weh = require('@weh/weh')
-const matter = require('@weh/matter')
-const markdown = require('@weh/markdown')
-const layouts = require('@weh/layouts')
-const pretty = require('@weh/pretty')
+const awoo = require('awoo')
+const matter = require('awoo-matter')
+const markdown = require('awoo-markdown')
+const layouts = require('awoo-layouts')
+const pretty = require('awoo-pretty')
 const tachyons = require('weh-tachyons')
 const vfile = require('vfile')
 
@@ -17,11 +17,11 @@ const siteLayouts = {
 const addCNAME = () => {
   return files => [...files, vfile({
     path: 'CNAME',
-    contents: 'weh.js.org'
+    contents: 'awoo.js.org'
   })]
 }
 
-weh(async site => {
+awoo(async site => {
   site.config({
     source: 'src',
     destination: 'dest'
